@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://nonlinear.nyc/</loc>
+    <lastmod>2025-06-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nonlinear.nyc/focus-test/</loc>
+    <lastmod>2023-07-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nonlinear.nyc/gallery-scroll/</loc>
+    <lastmod>2023-06-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nonlinear.nyc/test/</loc>
+    <lastmod>2023-06-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nonlinear.nyc/tile/</loc>
+    <lastmod>2023-06-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nonlinear.nyc/video-scroll/</loc>
+    <lastmod>2023-06-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nonlinear.nyc/categories/</loc>
+  </url><url>
+    <loc>https://nonlinear.nyc/tags/</loc>
+  </url>
+</urlset>

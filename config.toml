@@ -1,0 +1,5 @@
+baseURL = "https://nonlinear.nyc/"
+languageCode = "en-us"
+title = "Nonlinear cards"
+role = "Senior UI Designer"
+publishDir = "docs"
