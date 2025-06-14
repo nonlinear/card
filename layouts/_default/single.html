@@ -1,9 +1,18 @@
 <!doctype html>
 <html
     lang="en"
-    class="single {{ with .File }}{{ .BaseFileName }}{{ end }} {{ if .Params.style  }}{{ .Params.style }}{{ end }} {{ if .Params.category  }}{{ .Params.category }}{{ end }} {{ if .Params.status  }}{{ .Params.status }}{{ end }}"
->
-    {{ partial "head.html" . }}
+    class="single no-js{{ with .File }} {{ .BaseFileName }}{{ end }}{{ with .Params.style }} {{ $items := split . "," }}{{ range $index, $item := $items }}{{ if gt $index 0 }} {{ end }}{{ trim $item " " }}{{ end }}{{ end }}{{ if .Params.status }} {{ .Params.status }}{{ end }}">  <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <title>{{ .Page.Title }}</title>
+        <meta content="Codrops" name="author" />
+        <link href="https://use.typekit.net/ccs0evy.css" rel="stylesheet" />
+        <link href="css/base.css" rel="stylesheet" type="text/css" />
+        <script>
+            document.documentElement.classList.remove("no-js");
+            document.documentElement.classList.add("js");
+        </script>
+    </head>
     <body>
         {{ .Content }}
     </body>
