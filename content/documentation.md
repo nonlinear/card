@@ -5,10 +5,15 @@ status: draft
 style: animatewithsass
 date: 2025-06-14
 ---
-## styles
+
+## class
 
 - animatewithsass
 - mixins
+
+## js
+
+## css
 
 ## import
 

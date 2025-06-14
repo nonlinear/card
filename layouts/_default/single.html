@@ -1,21 +1,23 @@
 <!doctype html>
 <html
     lang="en"
-    class="single no-js{{ with .File }} {{ .BaseFileName }}{{ end }}{{ with .Params.style }} {{ $items := split . "," }}{{ range $index, $item := $items }}{{ if gt $index 0 }} {{ end }}{{ trim $item " " }}{{ end }}{{ end }}{{ if .Params.status }} {{ .Params.status }}{{ end }}">  <head>
+    class="single no-js{{ with .File }} {{ .BaseFileName }}{{ end }}{{ with .Params.class }}{{ range . }} {{ . }}{{ end }}{{ end }}{{ if .Params.status }} {{ .Params.status }}{{ end }}"
+>
+    <head>
         <meta charset="utf-8" />
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <title>{{ .Page.Title }}</title>
-        <meta content="{{ default .Site.Params.author .Params.author }}" name="author" />
+        <meta
+            content="{{ default .Site.Params.author .Params.author }}"
+            name="author"
+        />
         {{ $sass := resources.Get "css/main.scss" | css.Sass (dict "outputStyle"
-        "compressed" "enableSourceMap" true) | fingerprint }} {{ $style := $sass |
-        css.Sass }}
+        "compressed" "enableSourceMap" true) | fingerprint }} {{ $style := $sass
+        | css.Sass }}
         <link rel="stylesheet" href="{{ $style.Permalink }}" />
-        {{ with .Params.css }}
-          {{ $items := split . "," }}
-          {{ range $items }}
-            <link href="css/{{ trim . " " }}.css" rel="stylesheet" />
-          {{ end }}
-        {{ end }}
+        {{ with .Params.css }} {{ range . }}
+        <link href="css/{{ . }}.css" rel="stylesheet" />
+        {{ end }} {{ end }}
         <script>
             document.documentElement.classList.remove("no-js");
             document.documentElement.classList.add("js");
@@ -24,11 +26,8 @@
     <body>
         {{ .Content }}
     </body>
-    {{ with .Params.js }}
-      {{ $items := split . "," }}
-      {{ range $items }}
-        <script src="js/{{ trim . " " }}.js"></script>
-      {{ end }}
-    {{ end }}
+    {{ with .Params.js }} {{ range . }}
+    <script src="js/{{ . }}.js"></script>
+    {{ end }} {{ end }}
     <script src="js/index.js" type="module"></script>
 </html>
