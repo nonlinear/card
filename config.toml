@@ -1,5 +1,6 @@
 baseURL = "https://nonlinear.nyc/card/"
 languageCode = "en-us"
 title = "Nonlinear cards"
-role = "Senior UI Designer"
 publishDir = "docs"
+[Params]
+latest = "3DCarousel"
