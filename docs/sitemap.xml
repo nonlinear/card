@@ -2,32 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://nonlinear.nyc/</loc>
+    <loc>https://nonlinear.nyc/card/</loc>
     <lastmod>2025-06-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nonlinear.nyc/focus-test/</loc>
+    <loc>https://nonlinear.nyc/card/focus-test/</loc>
     <lastmod>2023-07-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nonlinear.nyc/3dcarousel/</loc>
+    <loc>https://nonlinear.nyc/card/3dcarousel/</loc>
     <lastmod>2023-06-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nonlinear.nyc/gallery-scroll/</loc>
+    <loc>https://nonlinear.nyc/card/gallery-scroll/</loc>
     <lastmod>2023-06-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nonlinear.nyc/test/</loc>
+    <loc>https://nonlinear.nyc/card/test/</loc>
     <lastmod>2023-06-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nonlinear.nyc/test2/</loc>
+    <loc>https://nonlinear.nyc/card/test2/</loc>
     <lastmod>2023-06-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nonlinear.nyc/tile/</loc>
+    <loc>https://nonlinear.nyc/card/tile/</loc>
     <lastmod>2023-06-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nonlinear.nyc/video-scroll/</loc>
+    <loc>https://nonlinear.nyc/card/video-scroll/</loc>
     <lastmod>2023-06-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nonlinear.nyc/categories/</loc>
+    <loc>https://nonlinear.nyc/card/categories/</loc>
   </url><url>
-    <loc>https://nonlinear.nyc/tags/</loc>
+    <loc>https://nonlinear.nyc/card/tags/</loc>
   </url>
 </urlset>

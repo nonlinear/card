@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Nonlinear cards</title>
-    <link>https://nonlinear.nyc/categories/</link>
+    <link>https://nonlinear.nyc/card/categories/</link>
     <description>Recent content in Categories on Nonlinear cards</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://nonlinear.nyc/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://nonlinear.nyc/card/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
