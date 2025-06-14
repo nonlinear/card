@@ -1,5 +1,7 @@
-@import "vendor/animatewithsass/animate.scss";
-@import "mixins";
-@import "functions";
-@import "tile";
-@import "layout";
+.animatewithsass {
+    @import "vendor/animatewithsass/animate.scss";
+}
+.mixins {
+    @import "mixins";
+    @import "functions";
+}

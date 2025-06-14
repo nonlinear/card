@@ -4,3 +4,4 @@ title = "Nonlinear cards"
 publishDir = "docs"
 [Params]
 latest = "3DCarousel"
+author = "Nicholas Frota"

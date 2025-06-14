@@ -5,9 +5,17 @@
         <meta charset="utf-8" />
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <title>{{ .Page.Title }}</title>
-        <meta content="Codrops" name="author" />
-        <link href="https://use.typekit.net/ccs0evy.css" rel="stylesheet" />
-        <link href="css/base.css" rel="stylesheet" type="text/css" />
+        <meta content="{{ default .Site.Params.author .Params.author }}" name="author" />
+        {{ $sass := resources.Get "css/main.scss" | css.Sass (dict "outputStyle"
+        "compressed" "enableSourceMap" true) | fingerprint }} {{ $style := $sass |
+        css.Sass }}
+        <link rel="stylesheet" href="{{ $style.Permalink }}" />
+        {{ with .Params.css }}
+          {{ $items := split . "," }}
+          {{ range $items }}
+            <link href="css/{{ trim . " " }}.css" rel="stylesheet" />
+          {{ end }}
+        {{ end }}
         <script>
             document.documentElement.classList.remove("no-js");
             document.documentElement.classList.add("js");
@@ -16,4 +24,11 @@
     <body>
         {{ .Content }}
     </body>
+    {{ with .Params.js }}
+      {{ $items := split . "," }}
+      {{ range $items }}
+        <script src="js/{{ trim . " " }}.js"></script>
+      {{ end }}
+    {{ end }}
+    <script src="js/index.js" type="module"></script>
 </html>

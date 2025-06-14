@@ -8143,7 +8143,7 @@
     -o-transform-origin: center bottom;
     transform-origin: center bottom; } }
 
-.mixins .center-card {
+.center-card {
   --center-card-width: 300px;
   --center-card-height: 200px;
   position: absolute;
@@ -8153,10 +8153,10 @@
   left: 50%;
   margin: calc(-0.5 * var(--center-card-height)) 0 0 calc(-0.5 * var(--center-card-width)); }
 
-.mixins .mockup {
+.mockup {
   --mockup-image: url(/images/mockups/bubble-wrap-2.png); }
 
-.mixins .mockup:before {
+.mockup:before {
   width: 100%;
   height: 100%;
   top: 0;
