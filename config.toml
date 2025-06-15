@@ -3,5 +3,5 @@ languageCode = "en-us"
 title = "Nonlinear cards"
 publishDir = "docs"
 [Params]
-latest = "3DCarousel"
+latest = "3dcarousel"
 author = "Nicholas Frota"
