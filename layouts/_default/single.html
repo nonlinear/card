@@ -26,8 +26,11 @@
     <body>
         {{ .Content }}
     </body>
-    {{ with .Params.js }} {{ range . }}
-    <script src="js/{{ . }}.js"></script>
-    {{ end }} {{ end }}
+
+    {{ with .Params.js }}
+      {{ range . }}
+        <script src="{{ printf "js/%s.js" . | relURL }}"></script>
+      {{ end }}
+    {{ end }}
     <script src="js/index.js" type="module"></script>
 </html>
