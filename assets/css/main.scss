@@ -2,6 +2,9 @@
     @import "vendor/animatewithsass/animate.scss";
 }
 .mixins {
+}
+
+.post {
     @import "mixins";
     @import "functions";
 }

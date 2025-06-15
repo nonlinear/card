@@ -2,7 +2,8 @@
 title: Documentation
 description: styles and libraries used
 status: draft
-style: animatewithsass
+class:
+  - post
 date: 2025-06-14
 ---
 

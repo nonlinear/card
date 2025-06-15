@@ -24,6 +24,10 @@
         </script>
     </head>
     <body>
+        {{ if isset .Params "3dcarousel" }}
+          {{ partial "3dcarousel.html" . }}
+        {{ end }}
+
         {{ .Content }}
     </body>
 
