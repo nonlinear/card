@@ -1,10 +1,3 @@
-.animatewithsass {
-    @import "vendor/animatewithsass/animate.scss";
-}
-.mixins {
-}
-
-.post {
-    @import "mixins";
-    @import "functions";
-}
+@import "vendor/animatewithsass/animate.scss";
+@import "mixins";
+@import "functions";
