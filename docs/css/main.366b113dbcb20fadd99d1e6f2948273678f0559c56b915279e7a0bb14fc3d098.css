@@ -8173,31 +8173,22 @@
   position: fixed;
   top: 10px;
   right: 10px;
-  width: 30px;
-  height: 30px;
+  width: 60px;
+  height: 60px;
   opacity: 0.5;
-  background: white;
-  border-radius: 20px;
+  border: dashed 2px white;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 10px;
+  font-size: 24px;
   cursor: pointer;
   transition: all 0.3s ease; }
 
-[data-micromodal-trigger]:after {
-  transition: all 0.3s ease; }
-
 [data-micromodal-trigger]:hover {
+  background: white;
   opacity: 1;
-  width: 90px; }
-
-[data-micromodal-trigger]:hover:after {
-  font-family: sans-serif;
-  font-weight: bold;
-  padding-left: 5px;
-  content: "credits";
-  color: black; }
+  transform: scale(1.1); }
 
 .modal {
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif; }

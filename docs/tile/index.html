@@ -12,7 +12,7 @@
             name="author"
         />
          
-        <link rel="stylesheet" href="https://nonlinear.nyc/card/css/main.27274a89d7a59b08bebd86da8f96c4398f1359ec0a4fe15e01404fd6ced883af.css" />
+        <link rel="stylesheet" href="https://nonlinear.nyc/card/css/main.29ecd33be19ed1b9197cf846c137341d287bb6e71d292efc1863facbda5f3ce4.css" />
         
         <script>
             document.documentElement.classList.remove("no-js");
@@ -96,10 +96,48 @@
 
 <p class="footer">A <a href="http://nonlinear.nyc">Nonlinear</a> project. Contact <a href="mailto:info@nicholasfrota.com">Nicholas Frota</a> for any questions.</p>
 
-        
+        <a href="#" data-micromodal-trigger="credits">🛎️</a>
+
+<div class="modal micromodal-slide" id="credits" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div
+            class="modal__container"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-1-title"
+        >
+            <header class="modal__header">
+                <h2 class="modal__title" id="modal-1-title">Micromodal</h2>
+                <button
+                    class="modal__close"
+                    aria-label="Close modal"
+                    data-micromodal-close
+                ></button>
+            </header>
+            <main class="modal__content" id="modal-1-content">
+                <p>Testando o modal funcionando!</p>
+            </main>
+            <footer class="modal__footer">
+                <button class="modal__btn modal__btn-primary">Continue</button>
+                <button class="modal__btn" data-micromodal-close>Close</button>
+            </footer>
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+<script>
+    MicroModal.init({
+        awaitOpenAnimation: true,
+        awaitCloseAnimation: true,
+        disableScroll: true,
+    });
+</script>
+
     </body>
 
     
 
-    <script src="js/micromodal.min.js"></script>
+
+
 </html>

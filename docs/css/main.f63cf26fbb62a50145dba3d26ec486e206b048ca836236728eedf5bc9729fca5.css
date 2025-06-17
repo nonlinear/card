@@ -8190,7 +8190,7 @@
 
 [data-micromodal-trigger]:hover {
   opacity: 1;
-  width: 90px; }
+  width: 100px; }
 
 [data-micromodal-trigger]:hover:after {
   font-family: sans-serif;
