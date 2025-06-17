@@ -3,7 +3,7 @@
     lang="en"
     class="single no-js documentation post draft"
 >
-    <head>
+    <head><script src="/card/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=card/livereload" data-no-instant defer></script>
         <meta charset="utf-8" />
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <title>Documentation</title>
@@ -12,7 +12,7 @@
             name="author"
         />
          
-        <link rel="stylesheet" href="https://nonlinear.nyc/card/css/main.27274a89d7a59b08bebd86da8f96c4398f1359ec0a4fe15e01404fd6ced883af.css" />
+        <link rel="stylesheet" href="http://localhost:1313/card/css/main.36a0346b2b06f2ba58288b495e8d97c79e29c653eda5f29150890861ace21ad7.css" />
         
         <script>
             document.documentElement.classList.remove("no-js");
@@ -43,9 +43,46 @@
 <li>write on frontmatter <code>import: STYLE1, STYLE2, STYLE3</code></li>
 </ol>
 
+        <div class="modal micromodal-slide" id="credits" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div
+            class="modal__container"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-1-title"
+        >
+            <header class="modal__header">
+                <h2 class="modal__title" id="modal-1-title">Micromodal</h2>
+                <button
+                    class="modal__close"
+                    aria-label="Close modal"
+                    data-micromodal-close
+                ></button>
+            </header>
+            <main class="modal__content" id="modal-1-content">
+                <p>
+                    Try hitting the <code>tab</code> key and notice how the
+                    focus stays within the modal itself. Also,
+                    <code>esc</code> to close modal.
+                </p>
+            </main>
+            <footer class="modal__footer">
+                <button class="modal__btn modal__btn-primary">Continue</button>
+                <button
+                    class="modal__btn"
+                    data-micromodal-close
+                    aria-label="Close this dialog window"
+                >
+                    Close
+                </button>
+            </footer>
+        </div>
+    </div>
+</div>
+
     </body>
 
     
 
-    <script src="js/modal.js"></script>
+    <script src="js/micromodal.min.js"></script>
 </html>

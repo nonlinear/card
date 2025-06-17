@@ -28,6 +28,7 @@
           {{ partial "3dcarousel.html" . }}
         {{ end }}
         {{ .Content }}
+        {{ partial "credits.html" . }}
     </body>
 
     {{ with .Params.js }}
@@ -36,5 +37,5 @@
       {{ end }}
     {{ end }}
 
-    <script src="js/modal.js"></script>
+    <script src="js/micromodal.min.js"></script>
 </html>
