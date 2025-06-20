@@ -1,11 +1,7 @@
 ---
-title: Documentation
+title: Post documentation
 description: how to write posts
 status: draft
-reference:
-    - https://tympanus.net/Development/3DCarousel/
-    - https://google.com
-    - https://nonlinear.nyc
 class:
   - post
 date: 2025-06-14

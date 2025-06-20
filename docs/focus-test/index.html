@@ -43,7 +43,7 @@
             aria-labelledby="modal-1-title"
         >
             <header class="modal__header">
-                <h2>focus test</h2>
+                <h2>About focus test</h2>
                 <button
                     class="modal__close"
                     aria-label="Close modal"
@@ -59,7 +59,7 @@
                 </section>
                 <section class="share">
                     <h3>Share</h3>
-                    <p>Testando o modal funcionando!</p>
+                    <div id="qrcode"></div>
                 </section>
                  
             </main>
@@ -70,7 +70,18 @@
     </div>
 </div>
 
-<script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+<script src="https://nonlinear.nyc/card/js/qrcode.min.js"></script>
+<script src="https://nonlinear.nyc/card/js/micromodal.min.js"></script>
+<script>
+    var qrcode = new QRCode(document.getElementById("qrcode"), {
+        text: "https:\/\/nonlinear.nyc\/card\/focus-test\/",
+        width: 150,
+        height: 150,
+        colorDark: "#000000",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.H,
+    });
+</script>
 <script>
     MicroModal.init({
         awaitOpenAnimation: true,
