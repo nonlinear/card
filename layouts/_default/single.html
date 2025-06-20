@@ -31,11 +31,21 @@
         {{ partial "credits.html" . }}
     </body>
 
-    {{ with .Params.js }}
-      {{ range . }}
-        <script src="{{ printf "js/%s.js" . | relURL }}"></script>
-      {{ end }}
-    {{ end }}
+    {{- with .Params.js }}
+      {{- range . }}
+        {{- if (reflect.IsMap .) }}
+          <script src="{{ printf "js/%s.js" .file | relURL }}"
+            {{- with .attrs }}
+              {{- if in . "module" }} type="module"{{ end }}
+              {{- if in . "defer" }} defer{{ end }}
+              {{- if in . "async" }} async{{ end }}
+            {{- end }}>
+          </script>
+        {{- else }}
+          <script src="{{ printf "js/%s.js" . | relURL }}"></script>
+        {{- end }}
+      {{- end }}
+    {{- end }}
 
 
 
