@@ -836,6 +836,18 @@
 </script>
 
     </body>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+        if (isMobile) {
+            setTimeout(() => {
+                window.scrollTo(0, 1);
+            }, 100);
+        }
+    });
+    </script>
           <script src="/card/js/gsap.min.js">
           </script>
           <script src="/card/js/ScrollTrigger.min.js">
