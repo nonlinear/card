@@ -31,8 +31,8 @@
         {{ partial "credits.html" . }}
     </body>
 
-    {{- with .Params.js }}
-      {{- range . }}
+    {{- if .Params.js }}
+      {{- range .Params.js }}
         {{- if (reflect.IsMap .) }}
           <script src="{{ printf "js/%s.js" .file | relURL }}"
             {{- with .attrs }}
