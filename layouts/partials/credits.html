@@ -32,25 +32,30 @@
                     <p>Published {{ div $diff 365 }} years ago</p>
                     {{ end }}
                 </section>
+                {{ partial "technologies.html" (dict "js" .Params.js "context"
+                .) }}
                 <section class="share">
                     <h3>Share</h3>
-                    <button id="share" style="display: none;">Share</button>
+                    <button id="share" style="display: none">Share</button>
 
                     <script>
-                    if (navigator.share) {
-                      document.getElementById('share').style.display = 'block';
-                      document.getElementById('share').addEventListener('click', async () => {
-                        try {
-                          await navigator.share({
-                            title: document.title,
-                            text: 'Check this out!',
-                            url: window.location.href,
-                          });
-                        } catch (err) {
-                          console.error('Error sharing:', err);
+                        if (navigator.share) {
+                            document.getElementById("share").style.display =
+                                "block";
+                            document
+                                .getElementById("share")
+                                .addEventListener("click", async () => {
+                                    try {
+                                        await navigator.share({
+                                            title: document.title,
+                                            text: "Check this out!",
+                                            url: window.location.href,
+                                        });
+                                    } catch (err) {
+                                        console.error("Error sharing:", err);
+                                    }
+                                });
                         }
-                      });
-                    }
                     </script>
                     <div id="qrcode"></div>
                 </section>
@@ -80,22 +85,4 @@
     </div>
 </div>
 
-<script src="{{ "js/qrcode.min.js" | absURL }}"></script>
-<script src="{{ "js/micromodal.min.js" | absURL }}"></script>
-<script>
-    var qrcode = new QRCode(document.getElementById("qrcode"), {
-        text: "{{ .Permalink }}",
-        width: 150,
-        height: 150,
-        colorDark: "#000000",
-        colorLight: "#ffffff",
-        correctLevel: QRCode.CorrectLevel.H,
-    });
-</script>
-<script>
-    MicroModal.init({
-        awaitOpenAnimation: true,
-        awaitCloseAnimation: true,
-        disableScroll: true,
-    });
-</script>
+{{ partial "qrcode.html" . }} {{ partial "micromodal.html" . }}

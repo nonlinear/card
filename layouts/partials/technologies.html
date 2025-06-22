@@ -1,0 +1,24 @@
+{{/* Partial: technologies.html Recebe via dict: - js: lista .Params.js do post
+(array de maps com "file" e "attrs") - context: o contexto completo da página
+(opcional, se precisar) Este partial mostra a seção "Technologies Used in This
+Post", listando só as tecnologias que aparecem no frontmatter js, comparando por
+id (case insensitive). */}} {{ $js := .js }} {{ $technologies :=
+site.Data.technologies }} {{- if $js }}
+<section class="technologies">
+    <h3>Technologies Used in This Post</h3>
+    <ul>
+        {{- range $tech := $technologies }} {{- $techId := lower $tech.id }} {{-
+        $found := false }} {{- range $item := $js }} {{- $itemFile := lower
+        $item.file }} {{- if eq $techId $itemFile }} {{- $found = true }} {{-
+        end }} {{- end }} {{- if $found }}
+        <li>
+            <a href="{{ $tech.link }}" target="_blank" rel="noopener"
+                >{{ $tech.name }}</a
+            >: {{ $tech.description }} {{- with $tech.dependencies }}
+            <br /><small>Depends on: {{ delimit . ", " }}</small>
+            {{- end }}
+        </li>
+        {{- end }} {{- end }}
+    </ul>
+</section>
+{{- end }}

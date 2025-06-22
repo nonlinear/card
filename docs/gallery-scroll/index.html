@@ -92,25 +92,30 @@ preloadImages()
                     <p>Published 1 years ago</p>
                     
                 </section>
+                  
+
                 <section class="share">
                     <h3>Share</h3>
-                    <button id="share" style="display: none;">Share</button>
+                    <button id="share" style="display: none">Share</button>
 
                     <script>
-                    if (navigator.share) {
-                      document.getElementById('share').style.display = 'block';
-                      document.getElementById('share').addEventListener('click', async () => {
-                        try {
-                          await navigator.share({
-                            title: document.title,
-                            text: 'Check this out!',
-                            url: window.location.href,
-                          });
-                        } catch (err) {
-                          console.error('Error sharing:', err);
+                        if (navigator.share) {
+                            document.getElementById("share").style.display =
+                                "block";
+                            document
+                                .getElementById("share")
+                                .addEventListener("click", async () => {
+                                    try {
+                                        await navigator.share({
+                                            title: document.title,
+                                            text: "Check this out!",
+                                            url: window.location.href,
+                                        });
+                                    } catch (err) {
+                                        console.error("Error sharing:", err);
+                                    }
+                                });
                         }
-                      });
-                    }
                     </script>
                     <div id="qrcode"></div>
                 </section>
@@ -123,8 +128,7 @@ preloadImages()
     </div>
 </div>
 
-<script src="https://nonlinear.nyc/card/js/qrcode.min.js"></script>
-<script src="https://nonlinear.nyc/card/js/micromodal.min.js"></script>
+<script src="https://nonlinear.nyc/card/js/lib/qrcode.min.js"></script>
 <script>
     var qrcode = new QRCode(document.getElementById("qrcode"), {
         text: "https:\/\/nonlinear.nyc\/card\/gallery-scroll\/",
@@ -134,7 +138,7 @@ preloadImages()
         colorLight: "#ffffff",
         correctLevel: QRCode.CorrectLevel.H,
     });
-</script>
+</script> <script src="https://nonlinear.nyc/card/js/lib/micromodal.min.js"></script>
 <script>
     MicroModal.init({
         awaitOpenAnimation: true,

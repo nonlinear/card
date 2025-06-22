@@ -49,25 +49,35 @@
                     <p>Published 1 weeks ago</p>
                     
                 </section>
+                  
+<section class="technologies">
+    <h3>Technologies Used in This Post</h3>
+    <ul>
+    </ul>
+</section>
+
                 <section class="share">
                     <h3>Share</h3>
-                    <button id="share" style="display: none;">Share</button>
+                    <button id="share" style="display: none">Share</button>
 
                     <script>
-                    if (navigator.share) {
-                      document.getElementById('share').style.display = 'block';
-                      document.getElementById('share').addEventListener('click', async () => {
-                        try {
-                          await navigator.share({
-                            title: document.title,
-                            text: 'Check this out!',
-                            url: window.location.href,
-                          });
-                        } catch (err) {
-                          console.error('Error sharing:', err);
+                        if (navigator.share) {
+                            document.getElementById("share").style.display =
+                                "block";
+                            document
+                                .getElementById("share")
+                                .addEventListener("click", async () => {
+                                    try {
+                                        await navigator.share({
+                                            title: document.title,
+                                            text: "Check this out!",
+                                            url: window.location.href,
+                                        });
+                                    } catch (err) {
+                                        console.error("Error sharing:", err);
+                                    }
+                                });
                         }
-                      });
-                    }
                     </script>
                     <div id="qrcode"></div>
                 </section>
@@ -80,8 +90,7 @@
     </div>
 </div>
 
-<script src="https://nonlinear.nyc/card/js/qrcode.min.js"></script>
-<script src="https://nonlinear.nyc/card/js/micromodal.min.js"></script>
+<script src="https://nonlinear.nyc/card/js/lib/qrcode.min.js"></script>
 <script>
     var qrcode = new QRCode(document.getElementById("qrcode"), {
         text: "https:\/\/nonlinear.nyc\/card\/carousel\/",
@@ -91,7 +100,7 @@
         colorLight: "#ffffff",
         correctLevel: QRCode.CorrectLevel.H,
     });
-</script>
+</script> <script src="https://nonlinear.nyc/card/js/lib/micromodal.min.js"></script>
 <script>
     MicroModal.init({
         awaitOpenAnimation: true,
@@ -117,11 +126,19 @@
     </script>
 
         
-          <script src="/card/js/lib/gsap.min.js"></script>
-          <script src="/card/js/lib/ScrollTrigger.min.js"></script>
-          <script src="/card/js/lib/ScrollSmoother.min.js"></script>
-          <script src="/card/js/lib/ScrollToPlugin.min.js"></script>
-          <script src="/card/js/lib/SplitText.min.js"></script>
-          <script src="/card/js/lib/imagesloaded.pkgd.min.js"></script>
+          <script src="/card/js/lib/gsap.min.js">
+          </script>
+          <script src="/card/js/lib/ScrollTrigger.min.js">
+          </script>
+          <script src="/card/js/lib/ScrollSmoother.min.js">
+          </script>
+          <script src="/card/js/lib/ScrollToPlugin.min.js">
+          </script>
+          <script src="/card/js/lib/SplitText.min.js">
+          </script>
+          <script src="/card/js/lib/imagesloaded.min.js">
+          </script>
+          <script src="/card/js/script/3dcarousel.js" type="module">
+          </script>
 
 </html>
