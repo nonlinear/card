@@ -20,8 +20,7 @@
         </script>
     </head>
     <body>
-        
-        <ul class="focus-test">
+         <ul class="focus-test">
 	<p>Disregard font and icons. This is just a test to be deleted soon</p>
 	<li><a class="btn btn-primary" href="#">primary button</a></li>
 <li><a class="btn btn-secondary" href="#">secondary button</a></li>
@@ -31,8 +30,7 @@
 <li><label><input type="checkbox" checked>checkbox, selected</label></li>
 <li><label><input type="radio">radio</label></li>
 <li><label><input type="radio" checked>radio, selected</label></li>
-</ul>
-        <a href="#" data-micromodal-trigger="credits">🛎️</a>
+</ul> <a href="#" data-micromodal-trigger="credits">🛎️</a>
 
 <div class="modal micromodal-slide" id="credits" aria-hidden="true">
     <div class="modal__overlay" tabindex="-1" data-micromodal-close>
@@ -111,17 +109,19 @@
     </body>
 
     <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        document.addEventListener("DOMContentLoaded", () => {
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(
+                navigator.userAgent,
+            );
 
-        if (isMobile) {
-            setTimeout(() => {
-                window.scrollTo(0, 1);
-            }, 100);
-        }
-    });
+            if (isMobile) {
+                setTimeout(() => {
+                    window.scrollTo(0, 1);
+                }, 100);
+            }
+        });
     </script>
 
-
+        
 
 </html>

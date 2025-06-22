@@ -1,0 +1,62 @@
+    {{/*
+
+    Partial: load-js.html
+
+    Description:
+    This partial dynamically loads JavaScript files declared in a page's front matter. It supports flexible configuration for each script, including:
+
+    - Optional attributes:
+      - **min** → Appends `.min` to the filename if the minified version is desired.
+      - **module** → Adds `type="module"` to the `<script>` tag.
+      - **defer** → Adds `defer` to the `<script>` tag.
+      - **async** → Adds `async` to the `<script>` tag.
+      - **script** → By default, scripts are loaded from `js/lib/` (for libraries).
+                    If the `script` attribute is present, the file loads from `js/script/` (for page-specific or project-specific scripts).
+
+    - Filename handling:
+      If `min` is included, the partial automatically appends `.min` to the filename before resolving it.
+
+    - Folder handling:
+      Libraries are assumed to be under `js/lib/` unless explicitly marked as `script`, which places them under `js/script/`.
+
+    Example front matter:
+
+    js:
+      - file: gsap
+        attrs: [min]
+      - file: ScrollTrigger
+        attrs: [min]
+      - file: 3dcarousel
+        attrs: [module, script]
+
+    This partial ensures clean and organized script management, automatically handling folder paths, file extensions, and tag attributes.
+
+    */}}
+
+    {{- if .Params.js }}
+      {{- range .Params.js }}
+        {{- if (reflect.IsMap .) }}
+          {{- $filename := .file }}
+          {{- with .attrs }}
+            {{- if in . "min" }}
+              {{- $filename = printf "%s.min" $filename }}
+            {{- end }}
+          {{- end }}
+          {{- $folder := "lib" }}
+          {{- with .attrs }}
+            {{- if in . "script" }}
+              {{- $folder = "script" }}
+            {{- end }}
+          {{- end }}
+          <script src="{{ printf "js/%s/%s.js" $folder $filename | relURL }}"
+            {{- with .attrs }}
+              {{- if in . "module" }} type="module"{{ end }}
+              {{- if in . "defer" }} defer{{ end }}
+              {{- if in . "async" }} async{{ end }}
+            {{- end }}>
+          </script>
+        {{- else }}
+          <script src="{{ printf "js/lib/%s.js" . | relURL }}"></script>
+        {{- end }}
+      {{- end }}
+    {{- end }}

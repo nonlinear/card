@@ -20,8 +20,7 @@
         </script>
     </head>
     <body>
-        
-        <h2 id="class">class</h2>
+         <h2 id="class">class</h2>
 <ul>
 <li>animatewithsass</li>
 <li>mixins</li>
@@ -42,8 +41,7 @@
 <li>make sure to use <code>static/POST/css/STYLE1.css</code> (or <code>STYLE2</code>, <code>STYLE3</code>, in order)</li>
 <li>write on frontmatter <code>import: STYLE1, STYLE2, STYLE3</code></li>
 </ol>
-
-        <a href="#" data-micromodal-trigger="credits">🛎️</a>
+ <a href="#" data-micromodal-trigger="credits">🛎️</a>
 
 <div class="modal micromodal-slide" id="credits" aria-hidden="true">
     <div class="modal__overlay" tabindex="-1" data-micromodal-close>
@@ -65,7 +63,7 @@
                 how to write posts
                 <section class="date">
                        
-                    <p>Published 6 days ago</p>
+                    <p>Published 1 weeks ago</p>
                     
                 </section>
                 <section class="share">
@@ -122,17 +120,19 @@
     </body>
 
     <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        document.addEventListener("DOMContentLoaded", () => {
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(
+                navigator.userAgent,
+            );
 
-        if (isMobile) {
-            setTimeout(() => {
-                window.scrollTo(0, 1);
-            }, 100);
-        }
-    });
+            if (isMobile) {
+                setTimeout(() => {
+                    window.scrollTo(0, 1);
+                }, 100);
+            }
+        });
     </script>
 
-
+        
 
 </html>

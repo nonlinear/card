@@ -20,8 +20,7 @@
         </script>
     </head>
     <body>
-        
-        <style>
+         <style>
   html {
     scroll-behavior: smooth;
   }
@@ -61,8 +60,7 @@
         video.pause();
         video.currentTime = 0;
       });
-    </script>
-        <a href="#" data-micromodal-trigger="credits">🛎️</a>
+    </script> <a href="#" data-micromodal-trigger="credits">🛎️</a>
 
 <div class="modal micromodal-slide" id="credits" aria-hidden="true">
     <div class="modal__overlay" tabindex="-1" data-micromodal-close>
@@ -141,17 +139,19 @@
     </body>
 
     <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        document.addEventListener("DOMContentLoaded", () => {
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(
+                navigator.userAgent,
+            );
 
-        if (isMobile) {
-            setTimeout(() => {
-                window.scrollTo(0, 1);
-            }, 100);
-        }
-    });
+            if (isMobile) {
+                setTimeout(() => {
+                    window.scrollTo(0, 1);
+                }, 100);
+            }
+        });
     </script>
 
-
+        
 
 </html>

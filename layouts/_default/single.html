@@ -24,41 +24,23 @@
         </script>
     </head>
     <body>
-        {{ if isset .Params "3dcarousel" }}
-          {{ partial "3dcarousel.html" . }}
-        {{ end }}
-        {{ .Content }}
-        {{ partial "credits.html" . }}
+        {{ if isset .Params "3dcarousel" }} {{ partial "3dcarousel.html" . }} {{
+        end }} {{ .Content }} {{ partial "credits.html" . }}
     </body>
 
     <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        document.addEventListener("DOMContentLoaded", () => {
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(
+                navigator.userAgent,
+            );
 
-        if (isMobile) {
-            setTimeout(() => {
-                window.scrollTo(0, 1);
-            }, 100);
-        }
-    });
+            if (isMobile) {
+                setTimeout(() => {
+                    window.scrollTo(0, 1);
+                }, 100);
+            }
+        });
     </script>
 
-    {{- if .Params.js }}
-      {{- range .Params.js }}
-        {{- if (reflect.IsMap .) }}
-          <script src="{{ printf "js/%s.js" .file | relURL }}"
-            {{- with .attrs }}
-              {{- if in . "module" }} type="module"{{ end }}
-              {{- if in . "defer" }} defer{{ end }}
-              {{- if in . "async" }} async{{ end }}
-            {{- end }}>
-          </script>
-        {{- else }}
-          <script src="{{ printf "js/%s.js" . | relURL }}"></script>
-        {{- end }}
-      {{- end }}
-    {{- end }}
-
-
-
+    {{ partial "load-js.html" . }}
 </html>
